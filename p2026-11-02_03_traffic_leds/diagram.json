@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "author": "cicero lima",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": -68.6, "left": 64.8, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 87, "left": -39, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -99.6, "left": 61.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 4.8,
+      "left": 95.45,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -90,
+      "left": 80.6,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -80.4,
+      "left": 99.8,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 4.8,
+      "left": 76.25,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 4.8,
+      "left": 57.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "bb1:2t.a", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:1t.a", "", [ "$bb" ] ],
+    [ "bb1:1b.f", "bb1:1t.e", "black", [ "v0" ] ],
+    [ "bb1:1b.j", "uno:GND.1", "black", [ "v0" ] ],
+    [ "bb1:1b.i", "bb1:3b.i", "black", [ "v0" ] ],
+    [ "bb1:1b.h", "bb1:5b.h", "black", [ "v0" ] ],
+    [ "led3:A", "bb1:6t.c", "", [ "$bb" ] ],
+    [ "led3:C", "bb1:5t.c", "", [ "$bb" ] ],
+    [ "led2:A", "bb1:4t.b", "", [ "$bb" ] ],
+    [ "led2:C", "bb1:3t.b", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:6t.e", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:6b.i", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:4t.e", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:4b.i", "", [ "$bb" ] ],
+    [ "r3:1", "bb1:2t.e", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:2b.i", "", [ "$bb" ] ],
+    [ "r3:2", "uno:13", "green", [ "h0" ] ],
+    [ "r2:2", "uno:11", "green", [ "h0" ] ],
+    [ "uno:9", "r1:2", "green", [ "v0" ] ],
+    [ "bb1:3b.f", "bb1:3t.e", "black", [ "v0" ] ],
+    [ "bb1:5b.f", "bb1:5t.e", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
