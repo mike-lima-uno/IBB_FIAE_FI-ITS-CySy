@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "author": "cicero lima",
+  "editor": "wokwi",
+  "parts": [ { "type": "wokwi-pi-pico", "id": "pico", "top": -3.15, "left": -207.6, "attrs": {} } ],
+  "connections": [ [ "pico:GP0", "$serialMonitor:RX", "", [] ], [ "pico:GP1", "$serialMonitor:TX", "", [] ] ],
+  "dependencies": {}
+}

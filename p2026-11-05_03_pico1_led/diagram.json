@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "author": "cicero lima",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-mini",
+      "id": "bb1",
+      "top": 29.7,
+      "left": -246.1,
+      "rotate": 90,
+      "attrs": { "color": "#eeefed" }
+    },
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20260406-v1.28.0" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 8.8,
+      "left": -229,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 23.15,
+      "left": -182.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pico:GND.1", "bb1:3t.a", "black", [ "h0" ] ],
+    [ "pico:GP0", "bb1:2t.a", "green", [ "h0" ] ],
+    [ "bb1:3b.f", "bb1:3t.e", "black", [ "h0" ] ],
+    [ "r1:1", "bb1:2b.g", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:2t.c", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:2b.h", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:3b.h", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}

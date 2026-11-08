@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "cicero lima",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0.7,
+      "left": -78.75,
+      "rotate": 90,
+      "attrs": { "env": "micropython-20260406-v1.28.0" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -93.6,
+      "left": 11.4,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "bz1:2", "pico:GP0", "red", [ "v0" ] ],
+    [ "bz1:1", "pico:GND.1", "black", [ "v38.4", "h-9.6" ] ]
+  ],
+  "dependencies": {}
+}
