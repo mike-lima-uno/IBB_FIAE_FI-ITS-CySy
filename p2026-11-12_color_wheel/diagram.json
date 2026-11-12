@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "author": "cicero lima",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-half",
+      "id": "bb1",
+      "top": 34.5,
+      "left": 99.3,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 25.8,
+      "left": -190.6,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": 72, "left": 293.7, "rotate": 90, "attrs": {} },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": -221.4,
+      "left": 216.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 90.35,
+      "left": 240,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 109.55,
+      "left": 240,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 119.15,
+      "left": 240,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "uno:11", "bb1:14b.j", "blue", [ "h0" ] ],
+    [ "bb1:bp.10", "bb1:12t.e", "#8f4814", [ "h0" ] ],
+    [ "uno:5V", "bb1:bp.14", "#8f4814", [ "h0" ] ],
+    [ "rgb1:R", "bb1:11t.b", "", [ "$bb" ] ],
+    [ "rgb1:COM", "bb1:12t.c", "", [ "$bb" ] ],
+    [ "rgb1:G", "bb1:13t.b", "", [ "$bb" ] ],
+    [ "rgb1:B", "bb1:14t.b", "", [ "$bb" ] ],
+    [ "uno:GND.1", "bb1:bn.10", "black", [ "h0" ] ],
+    [ "joystick1:VCC", "bb1:bp.1", "#8f4814", [ "v19.2", "h-67.2", "v56" ] ],
+    [ "joystick1:GND", "bb1:bn.1", "black", [ "v28.8", "h-97.3" ] ],
+    [ "r1:1", "bb1:11b.g", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:11t.c", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:13b.g", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:13t.c", "", [ "$bb" ] ],
+    [ "r3:1", "bb1:14b.g", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:14t.c", "", [ "$bb" ] ],
+    [ "uno:A0", "joystick1:HORZ", "blue", [ "h-38.3", "v-245.8", "h451.2" ] ],
+    [ "uno:A1", "joystick1:VERT", "blue", [ "h-28.7", "v-245.7", "h432" ] ],
+    [ "uno:10", "bb1:13b.i", "green", [ "h0" ] ],
+    [ "uno:9", "bb1:11b.h", "red", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
